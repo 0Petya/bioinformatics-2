@@ -17,7 +17,7 @@ velveth run_29 29 -fastq -shortPaired -interleaved ../data/mutant_interleaved.fa
 velvetg run_29/
 ```
 
-Once that was complete, we can check the quality of our assembly using (Quast)[http://quast.sourceforge.net/quast].
+Once that was complete, we can check the quality of our assembly using [Quast](http://quast.sourceforge.net/quast).
 
 ```
 quast contigs.fa
