@@ -1,6 +1,6 @@
 import Data.List (intercalate)
-
-type Sequence = String
+import Sequence (Sequence)
+import Solve (solveLines)
 
 slidingSlice :: Int -> Sequence -> [(Sequence, Int)]
 slidingSlice size sequence = go 1 sequence
@@ -18,8 +18,4 @@ solve (s:[]) = error "No T"
 solve (s:t:_) = intercalate " " . map show . findSliceIndicies t $ slidingSlice (length t) s
 
 main :: IO()
-main = do
-    putStrLn "Insert file name:"
-    fileName <- getLine
-    content <- readFile fileName
-    putStrLn . solve . lines $ content
+main = solveLines solve

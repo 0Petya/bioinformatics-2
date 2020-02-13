@@ -1,0 +1,5 @@
+#!/bin/bash
+
+problem=$1
+
+stack runghc -- -ilib $problem/solution.hs

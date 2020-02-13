@@ -1,3 +1,6 @@
+import Sequence (Sequence)
+import Solve (solveFile)
+
 complement :: Char -> Char
 complement nt
     | nt == 'A' = 'T'
@@ -6,12 +9,8 @@ complement nt
     | nt == 'G' = 'C'
     | otherwise = nt
 
-solve :: String -> String
+solve :: Sequence -> Sequence
 solve = reverse . map complement
 
 main :: IO()
-main = do
-    putStrLn "Insert file name:"
-    fileName <- getLine
-    content <- readFile fileName
-    putStrLn . solve $ content
+main = solveFile solve
