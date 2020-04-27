@@ -1,0 +1,12 @@
+#!/bin/bash
+
+mkdir -p ../../data/interim/star_alignment
+
+for sample in ../../data/raw/*.fastq; do
+    prefix=$(echo $sample | cut -d '/' -f 5 | cut -d '.' -f 1)
+    STAR \
+        --genomeDir ../../data/interim/star_indicies \
+        --runThreadN 4 \
+        --readFilesIn $sample \
+        --outFileNamePrefix ../../data/interim/star_alignment/$prefix
+done

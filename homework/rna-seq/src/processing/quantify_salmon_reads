@@ -1,0 +1,15 @@
+#!/bin/bash
+
+mkdir -p ../../data/processed
+
+for sample in ../../data/raw/SRR*.fastq; do
+    prefix=$(echo $sample | cut -d '/' -f 5 | cut -d '.' -f 1)
+    salmon \
+        quant \
+        -p 4 \
+        -i ../../data/interim/salmon_index \
+        -l A \
+        -r $sample \
+        --validateMappings \
+        -o ../../data/processed/$prefix
+done

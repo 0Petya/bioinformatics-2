@@ -1,0 +1,10 @@
+#!/bin/bash
+
+mkdir -p ../../reports/qc
+cd ../../reports/qc
+
+for fastq in ../../data/raw/*; do
+    fastqc --outdir=. $fastq
+done
+
+multiqc .

@@ -1,0 +1,13 @@
+#!/bin/bash
+
+mkdir -p ../../data/interim/star_indicies
+
+gffread ../../data/raw/GCF_000146045.2_R64_genomic.gff -T -o ../../data/interim/GCF_000146045.2_R64_genomic.gtf
+
+STAR \
+    --runThreadN 4 \
+    --runMode genomeGenerate \
+    --genomeDir ../../data/interim/star_indicies \
+    --genomeFastaFiles ../../data/raw/GCF_000146045.2_R64_genomic.fna \
+    --sjdbGTFfile ../../data/interim/GCF_000146045.2_R64_genomic.gtf \
+    --genomeSAindexNbases 10

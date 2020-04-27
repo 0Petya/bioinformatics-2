@@ -1,0 +1,49 @@
+---
+title: "STAR Counts Analysis"
+---
+
+```{r}
+library(DESeq2)
+```
+
+Let's load in the data and set some metadata.
+
+```{r}
+cts <- read.csv("../data/processed/star_counts.txt", sep="\t", comment.char='#', row.names="Geneid")[, -1:-5]
+colnames(cts)[1] = "WT_NR_A"
+colnames(cts)[2] = "WT_NR_B"
+colnames(cts)[3] = "WT_CR_A"
+colnames(cts)[4] = "WT_CR_B"
+
+coldata <- data.frame(row.names=colnames(cts), "condition"=c("Control", "Control", "Treat", "Treat"))
+```
+
+Then we can run the `DESeq` pipeline.
+
+```{r, message=FALSE}
+dds <- DESeqDataSetFromMatrix(countData=cts, colData=coldata, design=~condition)
+dds <- DESeq(dds)
+```
+
+Let's start with looking at what are the top $50$ most differentially expressed genes by p-value.
+
+```{r}
+res <- results(dds)
+as.data.frame(res[order(res$pvalue),][0:50, ])
+```
+
+Ok, let's see log fold change where genes with a $p < 0.05$ are in red.
+
+```{r}
+plotMA(res, main="Yeast Non-restricted vs Calorie-restricted")
+```
+
+Wow! That's a lot of highly-differentially expressed genes!
+
+Let's see how different they look between the two groups with a PCA plot.
+
+```{r}
+plotPCA(rlogTransformation(dds, blind=TRUE))
+```
+
+Looks like the two groups definitely have a different expression profile!

@@ -1,0 +1,57 @@
+---
+title: "Salmon Estimation Analysis"
+---
+
+```{r}
+library(DESeq2)
+library(GenomicFeatures)
+library(tximport)
+```
+
+So we've got our transcript abundance estimations, but we need to convert them to counts for `DESeq2` to work with them. In order to do that, we're using `tximport`. First we need to construct a table that maps transcript names to gene names since we're interested in gene-level differential expression analysis. We'll use the GFF file for our genome to make one.
+
+```{r, message=FALSE}
+txdb <- makeTxDbFromGFF("../data/raw/GCF_000146045.2_R64_genomic.gff")
+k <- keys(txdb, keytype="TXNAME")
+tx2gene <- select(txdb, k, "GENEID", "TXNAME")
+```
+
+Once that's done we can read in our estimations and use `tximport` to convert everything properly.
+
+```{r, message=FALSE}
+samples <- c("SRR1066657", "SRR1066658", "SRR1066659", "SRR1066660")
+files <- file.path("..", "data", "processed", samples, "quant.sf")
+names(files) <- paste0(samples)
+txi <- tximport(files, type="salmon", tx2gene=tx2gene)
+```
+
+Then we need to set some metadata and throw it all into `DESeq2` and run the pipeline.
+
+```{r, message=FALSE}
+coldata <- data.frame(row.names=c("WT_NR_A", "WT_NR_B", "WT_CR_A", "WT_CR_B"), "condition"=c("Control", "Control", "Treat", "Treat"))
+dds <- DESeqDataSetFromTximport(txi, coldata, ~condition)
+dds <- DESeq(dds)
+```
+
+Let's start with looking at what are the top $50$ most differentially expressed genes by p-value.
+
+```{r}
+res <- results(dds)
+as.data.frame(res[order(res$pvalue),][0:50, ])
+```
+
+Ok, let's see log fold change where genes with a $p < 0.05$ are in red.
+
+```{r}
+plotMA(res, main="Yeast Non-restricted vs Calorie-restricted")
+```
+
+Wow! That's a lot of highly-differentially expressed genes!
+
+Let's see how different they look between the two groups with a PCA plot.
+
+```{r}
+plotPCA(rlogTransformation(dds, blind=TRUE))
+```
+
+Looks like the two groups definitely have a different expression profile!

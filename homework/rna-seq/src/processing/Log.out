@@ -1,0 +1,88 @@
+STAR version=2.7.3a
+STAR compilation time,server,dir=Tue Oct 8 14:26:19 EDT 2019 vega:/home/dobin/data/STAR/STARcode/STAR.master/source
+##### Command Line:
+STAR --runThreadN 4 --runMode genomeGenerate --genomeDir ../../data/interim/star_indicies --genomeFastaFiles ../../data/raw/GCF_000146045.2_R64_genomic.fna --sjdbGTFfile ../../data/interim/GCF_000146045.2_R64_genomic.gtf --genomeSAindexNbases 10
+##### Initial USER parameters from Command Line:
+###### All USER parameters from Command Line:
+runThreadN                    4     ~RE-DEFINED
+runMode                       genomeGenerate     ~RE-DEFINED
+genomeDir                     ../../data/interim/star_indicies     ~RE-DEFINED
+genomeFastaFiles              ../../data/raw/GCF_000146045.2_R64_genomic.fna        ~RE-DEFINED
+sjdbGTFfile                   ../../data/interim/GCF_000146045.2_R64_genomic.gtf     ~RE-DEFINED
+genomeSAindexNbases           10     ~RE-DEFINED
+##### Finished reading parameters from all sources
+
+##### Final user re-defined parameters-----------------:
+runMode                           genomeGenerate
+runThreadN                        4
+genomeDir                         ../../data/interim/star_indicies
+genomeFastaFiles                  ../../data/raw/GCF_000146045.2_R64_genomic.fna   
+genomeSAindexNbases               10
+sjdbGTFfile                       ../../data/interim/GCF_000146045.2_R64_genomic.gtf
+
+-------------------------------
+##### Final effective command line:
+STAR   --runMode genomeGenerate   --runThreadN 4   --genomeDir ../../data/interim/star_indicies   --genomeFastaFiles ../../data/raw/GCF_000146045.2_R64_genomic.fna      --genomeSAindexNbases 10   --sjdbGTFfile ../../data/interim/GCF_000146045.2_R64_genomic.gtf
+----------------------------------------
+
+Finished loading and checking parameters
+Apr 25 23:50:49 ... starting to generate Genome files
+../../data/raw/GCF_000146045.2_R64_genomic.fna : chr # 0  "NC_001133.9" chrStart: 0
+../../data/raw/GCF_000146045.2_R64_genomic.fna : chr # 1  "NC_001134.8" chrStart: 262144
+../../data/raw/GCF_000146045.2_R64_genomic.fna : chr # 2  "NC_001135.5" chrStart: 1310720
+../../data/raw/GCF_000146045.2_R64_genomic.fna : chr # 3  "NC_001136.10" chrStart: 1835008
+../../data/raw/GCF_000146045.2_R64_genomic.fna : chr # 4  "NC_001137.3" chrStart: 3407872
+../../data/raw/GCF_000146045.2_R64_genomic.fna : chr # 5  "NC_001138.5" chrStart: 4194304
+../../data/raw/GCF_000146045.2_R64_genomic.fna : chr # 6  "NC_001139.9" chrStart: 4718592
+../../data/raw/GCF_000146045.2_R64_genomic.fna : chr # 7  "NC_001140.6" chrStart: 6029312
+../../data/raw/GCF_000146045.2_R64_genomic.fna : chr # 8  "NC_001141.2" chrStart: 6815744
+../../data/raw/GCF_000146045.2_R64_genomic.fna : chr # 9  "NC_001142.9" chrStart: 7340032
+../../data/raw/GCF_000146045.2_R64_genomic.fna : chr # 10  "NC_001143.9" chrStart: 8126464
+../../data/raw/GCF_000146045.2_R64_genomic.fna : chr # 11  "NC_001144.5" chrStart: 8912896
+../../data/raw/GCF_000146045.2_R64_genomic.fna : chr # 12  "NC_001145.3" chrStart: 10223616
+../../data/raw/GCF_000146045.2_R64_genomic.fna : chr # 13  "NC_001146.8" chrStart: 11272192
+../../data/raw/GCF_000146045.2_R64_genomic.fna : chr # 14  "NC_001147.6" chrStart: 12058624
+../../data/raw/GCF_000146045.2_R64_genomic.fna : chr # 15  "NC_001148.4" chrStart: 13369344
+../../data/raw/GCF_000146045.2_R64_genomic.fna : chr # 16  "NC_001224.1" chrStart: 14417920
+Estimated genome size=215680064   14680064   201000000
+GstrandBit=32
+Number of SA indices: 24314210
+Apr 25 23:50:49 ... starting to sort Suffix Array. This may take a long time...
+Number of chunks: 4;   chunks size limit: 64837888 bytes
+Apr 25 23:50:49 ... sorting Suffix Array chunks and saving them to disk...
+Writing 2865728 bytes into ../../data/interim/star_indicies/SA_3 ; empty space on disk = 984618480762880 bytes ... done
+Writing 64641136 bytes into ../../data/interim/star_indicies/SA_0 ; empty space on disk = 984618054713344 bytes ...Writing 62236096 bytes into ../../data/interim/star_indicies/SA_2 ; empty space on disk = 984618054713344 bytes ... done
+ done
+Writing 64770720 bytes into ../../data/interim/star_indicies/SA_1 ; empty space on disk = 984618054713344 bytes ... done
+Apr 25 23:50:57 ... loading chunks from disk, packing SA...
+Apr 25 23:50:57 ... finished generating suffix array
+Apr 25 23:50:57 ... generating Suffix Array index
+Apr 25 23:50:58 ... completed Suffix Array index
+Apr 25 23:50:58 ..... processing annotations GTF
+Processing pGe.sjdbGTFfile=../../data/interim/GCF_000146045.2_R64_genomic.gtf, found:
+		6420 transcripts
+		6760 exons (non-collapsed)
+		340 collapsed junctions
+Apr 25 23:50:59 ..... finished GTF processing
+Apr 25 23:50:59   Loaded database junctions from the GTF file: ../../data/interim/GCF_000146045.2_R64_genomic.gtf: 340 total junctions
+
+Apr 25 23:50:59   Finished preparing junctions
+Apr 25 23:50:59 ..... inserting junctions into the genome indices
+Apr 25 23:50:59   Finished SA search: number of new junctions=340, old junctions=0
+Apr 25 23:50:59   Finished sorting SA indicesL nInd=136000
+Genome size with junctions=14748404  14680064   68340
+GstrandBit1=32   GstrandBit=32
+Apr 25 23:50:59   Finished inserting junction indices
+Apr 25 23:50:59   Finished SAi
+Apr 25 23:50:59 ..... finished inserting junctions into genome
+Apr 25 23:50:59 ... writing Genome to disk ...
+Writing 14748404 bytes into ../../data/interim/star_indicies/Genome ; empty space on disk = 984617001549824 bytes ... done
+SA size in bytes: 100857120
+Apr 25 23:51:00 ... writing Suffix Array to disk ...
+Writing 100857120 bytes into ../../data/interim/star_indicies/SA ; empty space on disk = 984617003843584 bytes ... done
+Apr 25 23:51:01 ... writing SAindex to disk
+Writing 8 bytes into ../../data/interim/star_indicies/SAindex ; empty space on disk = 984616922513408 bytes ... done
+Writing 88 bytes into ../../data/interim/star_indicies/SAindex ; empty space on disk = 984616922513408 bytes ... done
+Writing 6116691 bytes into ../../data/interim/star_indicies/SAindex ; empty space on disk = 984616922513408 bytes ... done
+Apr 25 23:51:02 ..... finished successfully
+DONE: Genome generation, EXITING

@@ -1,0 +1,5 @@
+Sample	Filename	File type	Encoding	Total Sequences	Sequences flagged as poor quality	Sequence length	%GC	total_deduplicated_percentage	avg_sequence_length	basic_statistics	per_base_sequence_quality	per_tile_sequence_quality	per_sequence_quality_scores	per_base_sequence_content	per_sequence_gc_content	per_base_n_content	sequence_length_distribution	sequence_duplication_levels	overrepresented_sequences	adapter_content
+SRR1066657	SRR1066657.fastq	Conventional base calls	Sanger / Illumina 1.9	83775228.0	0.0	50.0	42.0	34.62399781772864	50.0	pass	pass	pass	pass	warn	pass	pass	pass	fail	warn	pass
+SRR1066658	SRR1066658.fastq	Conventional base calls	Sanger / Illumina 1.9	110931589.0	0.0	50.0	43.0	30.094007606488383	50.0	pass	pass	pass	pass	warn	pass	pass	pass	fail	warn	pass
+SRR1066659	SRR1066659.fastq	Conventional base calls	Sanger / Illumina 1.9	93062460.0	0.0	50.0	42.0	37.1580883723858	50.0	pass	pass	pass	pass	warn	pass	pass	pass	fail	warn	pass
+SRR1066660	SRR1066660.fastq	Conventional base calls	Sanger / Illumina 1.9	101174609.0	0.0	50.0	40.0	33.26126341802998	50.0	pass	pass	pass	pass	warn	pass	pass	pass	fail	fail	pass

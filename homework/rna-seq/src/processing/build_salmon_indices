@@ -1,0 +1,15 @@
+#!/bin/bash
+
+mkdir -p ../../data/interim
+
+grep "^>" ../../data/raw/GCF_000146045.2_R64_genomic.fna | cut -d ' ' -f 1 | cut -c 2- > ../../data/interim/decoys.txt
+
+cat ../../data/raw/GCF_000146045.2_R64_rna.fna ../../data/raw/GCF_000146045.2_R64_genomic.fna > ../../data/interim/gentrome.fa
+
+salmon \
+    index \
+    -p 4 \
+    -t ../../data/interim/gentrome.fa \
+    -i ../../data/interim/salmon_index \
+    -d ../../data/interim/decoys.txt \
+    -k 31

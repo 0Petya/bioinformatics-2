@@ -1,0 +1,5 @@
+Module	Section	Sample Name	Source
+FastQC	all_sections	SRR1066660	/student/petertran/src/bioinformatics-2-lab/rna-seq/reports/qc/SRR1066660_fastqc.zip
+FastQC	all_sections	SRR1066659	/student/petertran/src/bioinformatics-2-lab/rna-seq/reports/qc/SRR1066659_fastqc.zip
+FastQC	all_sections	SRR1066658	/student/petertran/src/bioinformatics-2-lab/rna-seq/reports/qc/SRR1066658_fastqc.zip
+FastQC	all_sections	SRR1066657	/student/petertran/src/bioinformatics-2-lab/rna-seq/reports/qc/SRR1066657_fastqc.zip

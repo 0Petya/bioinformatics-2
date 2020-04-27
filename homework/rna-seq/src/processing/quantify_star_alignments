@@ -1,0 +1,9 @@
+#!/bin/bash
+
+mkdir -p ../../data/processed
+
+featureCounts \
+    -T 4 \
+    -a ../../data/interim/GCF_000146045.2_R64_genomic.gtf \
+    -o ../../data/processed/star_counts.txt \
+    ../../data/interim/star_alignment/*.sam
