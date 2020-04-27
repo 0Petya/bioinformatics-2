@@ -35,7 +35,7 @@ as.data.frame(res[order(res$pvalue),][0:50, ])
 Ok, let's see log fold change where genes with a $p < 0.05$ are in red.
 
 ```{r}
-plotMA(res, main="Yeast Non-restricted vs Calorie-restricted")
+plotMA(res, 0.05, main="Yeast Non-restricted vs Calorie-restricted")
 ```
 
 Wow! That's a lot of highly-differentially expressed genes!
