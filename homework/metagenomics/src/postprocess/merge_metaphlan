@@ -1,0 +1,16 @@
+#!/bin/bash
+
+mkdir -p ../../data/interim/bugs_lists
+mkdir -p ../../data/processed
+
+ids=$(ls ../../data/interim/cat_reads | cut -d '.' -f 1)
+
+for id in $ids; do
+    cp ../../data/interim/humann2/"$id"_humann2_temp/*_bugs_list.tsv ../../data/interim/bugs_lists/
+done
+
+merge_metaphlan_tables.py ../../data/interim/bugs_lists/*.tsv > ../../data/interim/metaphlan_merged.tsv
+
+perl /public/ahnt/courses/bcb5250/metagenomics_wgs_lab/microbiome_helper/metaphlan_to_stamp.pl ../../data/interim/metaphlan_merged.tsv > ../../data/processed/metaphlan_merged.spf
+
+sed -i 's/_metaphlan_bugs_list//g' ../../data/processed/metaphlan_merged.spf

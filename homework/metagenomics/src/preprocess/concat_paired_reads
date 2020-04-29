@@ -1,0 +1,4 @@
+#!/bin/bash
+
+perl /public/ahnt/courses/bcb5250/metagenomics_wgs_lab/microbiome_helper/concat_paired_end.pl -p 4 --no_R_match -o ../../data/interim/cat_reads ../../data/interim/trimmed/*_paired_*.fastq
+ 

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+rm -rf ../../data/interim/humann2
+
+for reads in ../../data/interim/cat_reads/*.fastq; do
+    humann2 --input $reads --output ../../data/interim/humann2
+done

@@ -1,0 +1,10 @@
+#!/bin/bash
+
+mkdir -p ../../reports/qc/pre-trim
+cd ../../reports/qc/pre-trim
+
+for fastq in ../../../data/interim/reads/*.fastq; do
+    fastqc --outdir=. $fastq
+done
+
+multiqc .

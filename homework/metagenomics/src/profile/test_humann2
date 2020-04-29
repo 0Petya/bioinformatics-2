@@ -1,0 +1,3 @@
+#!/bin/bash
+
+humann2 --input ../../data/interim/cat_reads/p144C.fastq --output ../../data/interim/humann2

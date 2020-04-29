@@ -1,0 +1,18 @@
+#!/bin/bash
+
+mkdir -p ../../data/interim/subset_humann2
+mkdir -p ../../data/processed
+cd ../../data/interim/subset_humann2
+
+humann2_join_tables --input ../humann2 --file_name pathabundance --output ./humann2_pathabundance.tsv
+
+humann2_renorm_table --input ./humann2_pathabundance.tsv --units relab --output ./humann2_pathabundance_relab.tsv
+
+humann2_split_stratified_table --input ./humann2_pathabundance_relab.tsv --output ./
+
+head -n 1 ./humann2_pathabundance_relab_unstratified.tsv > ./humann2_pathabundance_relab_LACTOSECAT-PWY.tsv
+
+grep "LACTOSECAT-PWY" ./humann2_pathabundance_relab_unstratified.tsv >> ./humann2_pathabundance_relab_LACTOSECAT-PWY.tsv
+
+sed 's/_Abundance//g' ./humann2_pathabundance_relab_LACTOSECAT-PWY.tsv > ../../processed/humann2_pathabundance_relab_LACTOSECAT-PWY.spf
+sed -i 's/# Pathway/MetaCyc_pathway/' ../../processed/humann2_pathabundance_relab_LACTOSECAT-PWY.spf

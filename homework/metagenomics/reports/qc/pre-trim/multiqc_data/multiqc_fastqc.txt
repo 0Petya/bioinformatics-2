@@ -1,0 +1,25 @@
+Sample	Filename	File type	Encoding	Total Sequences	Sequences flagged as poor quality	Sequence length	%GC	total_deduplicated_percentage	avg_sequence_length	basic_statistics	per_base_sequence_quality	per_sequence_quality_scores	per_base_sequence_content	per_sequence_gc_content	per_base_n_content	sequence_length_distribution	sequence_duplication_levels	overrepresented_sequences	adapter_content
+p136C_R1	p136C_R1.fastq	Conventional base calls	Sanger / Illumina 1.9	75000.0	0.0	101.0	37.0	99.89466666666667	101.0	pass	pass	pass	pass	pass	pass	pass	pass	pass	pass
+p136C_R2	p136C_R2.fastq	Conventional base calls	Sanger / Illumina 1.9	75000.0	0.0	101.0	37.0	99.81333333333333	101.0	pass	pass	pass	pass	pass	pass	pass	pass	pass	pass
+p136N_R1	p136N_R1.fastq	Conventional base calls	Sanger / Illumina 1.9	75000.0	0.0	101.0	40.0	98.44133333333333	101.0	pass	pass	pass	pass	warn	pass	pass	pass	warn	pass
+p136N_R2	p136N_R2.fastq	Conventional base calls	Sanger / Illumina 1.9	75000.0	0.0	101.0	40.0	96.648	101.0	pass	pass	pass	pass	warn	pass	pass	pass	fail	pass
+p143C_R1	p143C_R1.fastq	Conventional base calls	Sanger / Illumina 1.9	75000.0	0.0	101.0	46.0	89.68266666666666	101.0	pass	fail	fail	pass	fail	warn	pass	pass	fail	pass
+p143C_R2	p143C_R2.fastq	Conventional base calls	Sanger / Illumina 1.9	75000.0	0.0	101.0	45.0	95.40133333333334	101.0	pass	fail	pass	pass	fail	warn	pass	pass	fail	pass
+p143N_R1	p143N_R1.fastq	Conventional base calls	Sanger / Illumina 1.9	75000.0	0.0	101.0	44.0	97.50933333333333	101.0	pass	fail	pass	pass	warn	warn	pass	pass	warn	pass
+p143N_R2	p143N_R2.fastq	Conventional base calls	Sanger / Illumina 1.9	75000.0	0.0	101.0	44.0	90.45333333333333	101.0	pass	fail	fail	pass	fail	warn	pass	pass	fail	pass
+p144C_R1	p144C_R1.fastq	Conventional base calls	Sanger / Illumina 1.9	75000.0	0.0	101.0	38.0	93.91733333333333	101.0	pass	fail	pass	pass	warn	warn	pass	pass	warn	pass
+p144C_R2	p144C_R2.fastq	Conventional base calls	Sanger / Illumina 1.9	75000.0	0.0	101.0	38.0	87.18666666666667	101.0	pass	fail	fail	pass	fail	warn	pass	pass	fail	pass
+p144N_R1	p144N_R1.fastq	Conventional base calls	Sanger / Illumina 1.9	75000.0	0.0	101.0	42.0	99.48	101.0	pass	pass	pass	pass	pass	pass	pass	pass	warn	pass
+p144N_R2	p144N_R2.fastq	Conventional base calls	Sanger / Illumina 1.9	75000.0	0.0	101.0	42.0	99.408	101.0	pass	pass	pass	pass	pass	pass	pass	pass	warn	pass
+p146C_R1	p146C_R1.fastq	Conventional base calls	Sanger / Illumina 1.9	75000.0	0.0	101.0	43.0	99.41733333333333	101.0	pass	pass	pass	pass	pass	pass	pass	pass	warn	pass
+p146C_R2	p146C_R2.fastq	Conventional base calls	Sanger / Illumina 1.9	75000.0	0.0	101.0	43.0	98.34133333333334	101.0	pass	pass	pass	pass	pass	pass	pass	pass	warn	pass
+p146N_R1	p146N_R1.fastq	Conventional base calls	Sanger / Illumina 1.9	75000.0	0.0	101.0	41.0	99.63733333333333	101.0	pass	pass	pass	pass	pass	pass	pass	pass	warn	pass
+p146N_R2	p146N_R2.fastq	Conventional base calls	Sanger / Illumina 1.9	75000.0	0.0	101.0	41.0	99.636	101.0	pass	pass	pass	pass	pass	pass	pass	pass	warn	pass
+p153C_R1	p153C_R1.fastq	Conventional base calls	Sanger / Illumina 1.9	75000.0	0.0	101.0	37.0	99.68266666666666	101.0	pass	pass	pass	pass	pass	pass	pass	pass	pass	pass
+p153C_R2	p153C_R2.fastq	Conventional base calls	Sanger / Illumina 1.9	75000.0	0.0	101.0	37.0	97.54933333333334	101.0	pass	pass	pass	pass	warn	pass	pass	pass	fail	pass
+p153N_R1	p153N_R1.fastq	Conventional base calls	Sanger / Illumina 1.9	75000.0	0.0	101.0	45.0	99.85199999999999	101.0	pass	pass	pass	pass	fail	pass	pass	pass	pass	pass
+p153N_R2	p153N_R2.fastq	Conventional base calls	Sanger / Illumina 1.9	75000.0	0.0	101.0	45.0	99.81466666666667	101.0	pass	pass	pass	pass	fail	pass	pass	pass	pass	pass
+p156C_R1	p156C_R1.fastq	Conventional base calls	Sanger / Illumina 1.9	75000.0	0.0	101.0	40.0	99.78533333333334	101.0	pass	pass	pass	pass	warn	pass	pass	pass	pass	pass
+p156C_R2	p156C_R2.fastq	Conventional base calls	Sanger / Illumina 1.9	75000.0	0.0	101.0	40.0	99.79466666666667	101.0	pass	pass	pass	pass	warn	pass	pass	pass	pass	pass
+p156N_R1	p156N_R1.fastq	Conventional base calls	Sanger / Illumina 1.9	75000.0	0.0	101.0	44.0	99.95333333333333	101.0	pass	pass	pass	pass	pass	pass	pass	pass	pass	pass
+p156N_R2	p156N_R2.fastq	Conventional base calls	Sanger / Illumina 1.9	75000.0	0.0	101.0	44.0	99.92533333333333	101.0	pass	pass	pass	pass	pass	pass	pass	pass	pass	pass

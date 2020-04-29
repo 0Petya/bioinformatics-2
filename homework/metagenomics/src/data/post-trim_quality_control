@@ -1,0 +1,10 @@
+#!/bin/bash
+
+mkdir -p ../../reports/qc/post-trim
+cd ../../reports/qc/post-trim
+
+for fastq in ../../../data/interim/trimmed/*_paired_*.fastq; do
+    fastqc --outdir=. $fastq
+done
+
+multiqc .

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+mkdir -p ../../data/interim/reads
+
+cp ../../data/raw/raw_data/*.gz ../../data/interim/reads/
+cd ../../data/interim/reads
+gunzip *.gz

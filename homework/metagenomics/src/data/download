@@ -1,0 +1,10 @@
+#!/bin/bash
+
+mkdir -p ../../data/raw
+
+cd ../../data/raw
+wget http://kronos.pharmacology.dal.ca/public_files/tutorial_datasets/mgs_tutorial_Oct2017.zip
+unzip mgs_tutorial_Oct2017.zip
+mv mgs_tutorial_Oct2017/* .
+
+rm -r mgs_tutorial_Oct2017*
