@@ -7,12 +7,12 @@ In order to download the data, use `./src/data/download`. The data can be extrac
 After extracting the data, we can do some quality control with [FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/) and [MultiQC](https://multiqc.info/). This is under `./src/data/pre-trim_quality_control`.
 
 The results are decent, but a few reads aren't doing so great.
-![Pre-trim per base sequence quality](https://0petya.github.io/bioinformatics-2/homework/metagenomics/reports/figures/pre-trim_fastqc_per_sequence_quality_scores_plot.png)
+![Pre-trim per base sequence quality](https://0petya.github.io/bioinformatics-2/homework/metagenomics/reports/figures/pre-trim_fastqc_per_sequence_quality_plot.png)
 
 So we'll trim the reads with [kneaddata](https://bitbucket.org/biobakery/kneaddata/wiki/Home). This can be done with `./src/preprocess/trim`.
 
 Once that's done, we can run quality control again with `./src/data/post-trim_quality_control`, and this time it looks a little better.
-![Post-trim per base sequence quality](https://0petya.github.io/bioinformatics-2/homework/metagenomics/reports/figures/post-trim_fastqc_per_sequence_quality_scores_plot.png)
+![Post-trim per base sequence quality](https://0petya.github.io/bioinformatics-2/homework/metagenomics/reports/figures/post-trim_fastqc_per_sequence_quality_plot.png)
 
 Before using [Humann2](https://huttenhower.sph.harvard.edu/humann), if you haven't yet, you can run these two commands to download the demo databases to reduce run time.
 
